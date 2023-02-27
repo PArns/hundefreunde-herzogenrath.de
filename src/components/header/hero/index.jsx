@@ -1,29 +1,22 @@
 import * as React from "react";
 
 import StaticImageFS from "./staticImageFS";
+import ScrollDownIndicator from "./scrolldownindicator";
 import classNames from "classnames";
-
-const bgImage = {
-  pointerEvents: "none",
-  position: "absolute",
-  width: "100%",
-  height: "100%",
-  zIndex: -1,
-  objectPosition: "center",
-};
 
 const Hero = ({ imageName, children }) => {
   return (
-    <div className="w-sceen relative grid h-screen place-content-center">
+    <div className="w-sceen relative grid h-max place-content-center lg:h-screen">
       <StaticImageFS
         filename={imageName}
         alt="Hundefreunde Herzogenrath"
-        className="hero-image"
-        style={bgImage}
-        imgStyle={bgImage}
+        className="pointer-events-none -z-10 h-max w-full object-cover lg:absolute lg:h-screen"
       />
 
       <div className="text-center">{children}</div>
+      <div className="absolute inset-x-0 bottom-10 hidden lg:block">
+        <ScrollDownIndicator />
+      </div>
     </div>
   );
 };
