@@ -1,12 +1,14 @@
-import * as React from "react"
+import * as React from "react";
 
+import Seo from "../components/tools/seo";
+import MainLayout from "../layouts/main";
 
 const IndexPage = () => {
-  return (
-    <h1>Hello World!</h1>
-  )
-}
+  return <MainLayout>Hello World!</MainLayout>;
+};
 
-export default IndexPage
+export default IndexPage;
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => {
+  return <Seo />;
+};
