@@ -4,7 +4,7 @@ import Seo from "../components/tools/seo";
 import MainLayout from "../layouts/main";
 
 const IndexPage = () => {
-  return <MainLayout>Hello World!</MainLayout>;
+  return <MainLayout><h1>Hello World!</h1></MainLayout>;
 };
 
 export default IndexPage;
