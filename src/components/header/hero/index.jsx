@@ -3,18 +3,21 @@ import * as React from "react";
 import StaticImageFS from "./staticImageFS";
 import ScrollDownIndicator from "./scrolldownindicator";
 import classNames from "classnames";
+import MenuBar from "./menu";
 
 const Hero = ({ imageName, children }) => {
   return (
-    <div className="w-sceen relative grid h-max place-content-center lg:h-screen">
+    <div className="w-sceen relative grid h-full place-content-center transition lg:h-screen">
       <StaticImageFS
         filename={imageName}
         alt="Hundefreunde Herzogenrath"
-        className="pointer-events-none -z-10 h-max w-full object-cover lg:absolute lg:h-screen"
+        className="pointer-events-none -z-10 w-full object-cover lg:absolute lg:h-screen"
       />
 
-      <div className="text-center">{children}</div>
-      <div className="absolute inset-x-0 bottom-10 hidden lg:block">
+      <div className="absolute grid h-full w-full place-content-center text-center">
+        {children}
+      </div>
+      <div className="absolute inset-x-0 bottom-20 hidden lg:block">
         <ScrollDownIndicator />
       </div>
     </div>
@@ -22,17 +25,34 @@ const Hero = ({ imageName, children }) => {
 };
 
 const Title = ({ children, className }) => {
-  const classes = classNames("text-5xl font-bold text-white", className);
+  const classes = classNames(
+    "text-3xl font-bold text-white xl:text-8xl md:text-5xl mb-2 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]",
+    className
+  );
   return <div className={classes}>{children}</div>;
 };
 
 Hero.Title = Title;
 
 const SubTitle = ({ children, className }) => {
-  const classes = classNames("text-3xl font-semibold text-white", className);
+  const classes = classNames(
+    "text-2xl font-semibold text-white xl:text-6xl md:text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]",
+    className
+  );
   return <div className={classes}>{children}</div>;
 };
 
 Hero.SubTitle = SubTitle;
+
+const Menu = ({ items, className, location, anchor = "main" }) => {
+  const classes = classNames("w-full absolute bottom-0 left-0", className);
+  return (
+    <div className={classes}>
+      <MenuBar items={items} location={location} anchor={anchor} />
+    </div>
+  );
+};
+
+Hero.Menu = Menu;
 
 export default Hero;

@@ -1,12 +1,12 @@
 import * as React from "react";
 
-import Seo from "../components/tools/seo";
-import MainLayout from "../layouts/main";
+import Seo from "../../components/tools/seo";
+import MainLayout from "../../layouts/main";
 
 const IndexPage = ({ location }) => {
   return (
     <MainLayout location={location}>
-      <h1>Hello World!</h1>
+      <h1>Kurse</h1>
     </MainLayout>
   );
 };
