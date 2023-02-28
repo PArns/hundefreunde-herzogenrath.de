@@ -20,6 +20,7 @@ const MainLayout = ({ children, location }) => {
         <Hero.SubTitle>Die Hundeschule im Kreis Aachen</Hero.SubTitle>
         <Hero.Menu items={items} location={location} />
       </Hero>
+
       <div className="container mx-auto px-4" id="main">
         {children}
       </div>

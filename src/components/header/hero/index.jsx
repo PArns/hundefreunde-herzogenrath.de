@@ -7,11 +7,11 @@ import MenuBar from "./menu";
 
 const Hero = ({ imageName, children }) => {
   return (
-    <div className="w-sceen relative grid h-full place-content-center transition lg:h-screen">
+    <div className="relative grid place-content-center">
       <StaticImageFS
         filename={imageName}
         alt="Hundefreunde Herzogenrath"
-        className="pointer-events-none -z-10 w-full object-cover lg:absolute lg:h-screen"
+        className="pointer-events-none -z-10 w-screen object-cover lg:h-screen"
       />
 
       <div className="absolute grid h-full w-full place-content-center text-center">
