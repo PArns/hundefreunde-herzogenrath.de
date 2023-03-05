@@ -5,6 +5,8 @@ import ScrollDownIndicator from "./scrolldownindicator";
 import classNames from "classnames";
 import MenuBar from "./menu";
 
+import TopDivider from "../../svgs/divider/topdivider";
+
 const Hero = ({ imageName, children }) => {
   return (
     <div className="relative grid place-content-center">
@@ -14,7 +16,11 @@ const Hero = ({ imageName, children }) => {
         className="pointer-events-none -z-10 w-screen object-cover lg:h-screen"
       />
 
-      <div className="absolute grid h-full w-full place-content-center text-center">
+      <div className="absolute bottom-[44px] sm:bottom-[48px] w-screen">
+        <TopDivider fill={"#1f2937"} />
+      </div>
+
+      <div className="absolute grid h-full w-screen place-content-center text-center">
         {children}
       </div>
       <div className="absolute inset-x-0 bottom-20 hidden lg:block">

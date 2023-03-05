@@ -14,9 +14,9 @@ const MenuBar = ({ items, location, anchor }) => {
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <div className="container mx-auto">
+            <div className="relative flex pb-3 items-center justify-between">
+              <div className="absolute inset-y-0 flex items-center sm:hidden">
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Menü öffnen</span>
                   {open ? (
@@ -26,7 +26,7 @@ const MenuBar = ({ items, location, anchor }) => {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-1 items-center justify-center sm:items-stretch">
                 <div className="flex flex-shrink-0 items-center">
                   <StaticImage
                     className="block h-8 w-auto"
@@ -37,7 +37,7 @@ const MenuBar = ({ items, location, anchor }) => {
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-2">
                     {items.map((item) => (
                       <Link
                         key={item.name}
@@ -64,7 +64,7 @@ const MenuBar = ({ items, location, anchor }) => {
               {items.map((item) => (
                 <Disclosure.Button
                   key={item.name}
-                  as="a"
+                  as={Link}
                   to={`${item.href}#${anchor}`}
                   className={classNames(
                     location.pathname === item.href
