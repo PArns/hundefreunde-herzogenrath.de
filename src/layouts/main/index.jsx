@@ -4,7 +4,8 @@ import { Analytics } from "@vercel/analytics/react";
 import Hero from "../../components/header/hero";
 import Footer from "../../components/footer";
 
-const MainLayout = ({ children, headerImage="gruppe.jpg", location }) => {
+const MainLayout = ({ children, headerImage = "gruppe.jpg", location }) => {
+
   const items = [
     { name: "Willkommen", href: "/" },
     { name: "News", href: "/blog/" },
@@ -16,20 +17,20 @@ const MainLayout = ({ children, headerImage="gruppe.jpg", location }) => {
   ];
 
   return (
-    <div>
+    <>
       <Hero imageName={headerImage}>
         <Hero.Title>Hundefreunde Herzogenrath</Hero.Title>
         <Hero.SubTitle>Die Hundeschule im Kreis Aachen</Hero.SubTitle>
         <Hero.Menu items={items} location={location} />
       </Hero>
 
-      <div className="container mx-auto px-4" id="main">
+      <div className="container mx-auto" id="main">
         {children}
       </div>
 
       <Footer />
       <Analytics />
-    </div>
+    </>
   );
 };
 

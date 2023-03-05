@@ -7,11 +7,13 @@ module.exports = {
     "./src/pages/**/*.{js,jsx,ts,tsx}",
     "./src/components/**/*.{js,jsx,ts,tsx}",
     "./src/templates/**/*.{js,jsx,ts,tsx}",
+    "./src/sections/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {},
   },
   plugins: [
+    require("tailwind-container-break-out"),
     plugin(function ({ addBase, theme }) {
       addBase({
         h1: {
