@@ -4,7 +4,7 @@ import KursBox from "../../components/kursbox";
 
 const Kurse = () => {
   return (
-    <div className="grid grid-cols-2 items-center justify-center gap-4 lg:grid-cols-4 py-10">
+    <div className="grid grid-cols-2 items-center justify-center gap-4 lg:grid-cols-4 py-5 md:py-10 px-2">
       <KursBox
         name="Welpen"
         imageName={"welpen.jpg"}
