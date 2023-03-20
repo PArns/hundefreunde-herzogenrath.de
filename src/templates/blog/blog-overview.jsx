@@ -4,6 +4,8 @@ import { graphql } from "gatsby";
 
 import Seo from "../../components/tools/seo";
 import MainLayout from "../../layouts/main";
+
+import TatzenHeader from "../../components/tools/tatzenheader";
 import BlogCard from "../../components/blog/blogcard";
 import Tag from "../../components/blog/tag";
 import Pagination from "../../components/blog/pagination";
@@ -19,12 +21,21 @@ const BlogIndex = ({ data, pageContext, location }) => {
   const tagData = data.tags.distinct;
 
   return (
-    <MainLayout location={location}> 
+    <MainLayout location={location}>
+      
+      <div className="mt-10 mb-5">
+        <TatzenHeader fill="#FFCC00">Aktuelles rund um die Hundefreunde</TatzenHeader>
+      </div>
+
       <Container>
         <div className="flex flex-wrap gap-2 py-2 md:gap-4 md:pt-4 lg:flex-nowrap">
           <div className="w-max">
             {blogPostData.map((post) => (
-              <BlogCard post={post} key={post.slug} />
+              <BlogCard
+                post={post}
+                key={post.slug}
+                className="mb-10 last:mb-5"
+              />
             ))}
 
             {showAllPosts && pageContext.pageCount > 1 && (
@@ -42,14 +53,18 @@ const BlogIndex = ({ data, pageContext, location }) => {
           </div>
 
           <div className="hidden h-fit lg:flex">
-            <div className="w-[350px] rounded-lg border bg-white p-2">
+            <div className="w-[350px] rounded-lg border bg-white p-2 shadow-lg">
               <h4 className="mb-1 font-semibold">Blog Tag-Cloud</h4>
               {tagData.map((tag) => (
                 <Tag tag={tag} key={tag} />
               ))}
 
               {!showAllPosts && (
-                <Tag tag="Alle anzeigen" key="Alle anzeigen" uri="/blog/#main" />
+                <Tag
+                  tag="Alle anzeigen"
+                  key="Alle anzeigen"
+                  uri="/blog/#main"
+                />
               )}
             </div>
           </div>

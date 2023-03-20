@@ -3,11 +3,12 @@ import * as React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
+import classNames from "classnames";
 
 import Excerpt from "./excerpt";
 import Tag from "./tag";
 
-const BlogCard = ({ post, ...other }) => {
+const BlogCard = ({ post, className, ...other }) => {
   const options = {
     renderNode: {
       ["embedded-entry-inline"]: (node) => {
@@ -23,8 +24,10 @@ const BlogCard = ({ post, ...other }) => {
     },
   };
 
+  const boxClasses = classNames("rounded-lg border bg-white shadow-lg", className);
+
   return (
-    <div className="rounded-lg border bg-white shadow-lg" {...other}>
+    <div className={boxClasses} {...other}>
       <div className="relative">
         <div>
           <a href={`/blog/${post.slug}/#main`}>
