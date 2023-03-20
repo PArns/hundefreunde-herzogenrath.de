@@ -24,9 +24,31 @@ const IndexPage = ({ location, data }) => {
 
       <Kurse className="mb-10" />
 
+      <div className="mx-break-out w-screen py-5 bg-gray-100">
+        <div className="container mx-auto">
+          <div className="my-10">
+            <TatzenHeader fill="#FFCC00">Aktuelles</TatzenHeader>
+          </div>
+
+          <div className="my-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {posts &&
+              posts.map((post) => <BlogCard key={post.slug} post={post} />)}
+          </div>
+
+          <div className="my-10 text-right">
+            <Link
+              to={`/blog/#main`}
+              className="rounded bg-sky-500 py-2 px-4 text-xl font-semibold text-white transition hover:bg-sky-700"
+            >
+              Weitere Neuigkeiten gibt es hier ...
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <FixedBackground
         imageName="hundmitwelpe.jpg"
-        className="grid place-content-center pb-10 text-4xl font-bold text-white drop-shadow-lg md:py-16 md:text-6xl lg:py-20 lg:text-8xl xl:py-28 xl:text-9xl"
+        className="grid place-content-center py-10 text-4xl font-bold text-white drop-shadow-lg md:py-16 md:text-6xl lg:py-20 lg:text-8xl xl:py-28 xl:text-9xl"
       >
         <div className="grid-row grid place-content-center">
           <div className="flex flex-row justify-center">
@@ -51,26 +73,6 @@ const IndexPage = ({ location, data }) => {
           </Link>
         </div>
       </FixedBackground>
-
-      <div>
-        <div className="my-10">
-          <TatzenHeader fill="#FFCC00">Aktuelle Neuigkeiten</TatzenHeader>
-        </div>
-
-        <div className="my-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {posts &&
-            posts.map((post) => <BlogCard key={post.slug} post={post} />)}
-        </div>
-
-        <div className="my-10 text-right">
-          <Link
-            to={`/blog/#main`}
-            className="rounded bg-sky-500 py-2 px-4 text-2xl font-semibold text-white transition hover:bg-sky-700"
-          >
-            Weitere Neuigkeiten gibt es hier ...
-          </Link>
-        </div>
-      </div>
     </MainLayout>
   );
 };
