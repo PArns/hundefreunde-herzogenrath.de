@@ -1,10 +1,15 @@
 import * as React from "react";
+import classNames from "classnames";
 
 import KursBox from "../../components/kursbox";
 
-const Kurse = () => {
+const Kurse = ({ className }) => {
+  const classes = classNames(
+    "grid grid-cols-2 items-center justify-center gap-4 px-2 lg:grid-cols-4",
+    className
+  );
   return (
-    <div className="grid grid-cols-2 items-center justify-center gap-4 lg:grid-cols-4 py-5 md:py-10 px-2">
+    <div className={classes}>
       <KursBox
         name="Welpen"
         imageName={"welpen.jpg"}

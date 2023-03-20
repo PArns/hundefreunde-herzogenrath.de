@@ -17,6 +17,7 @@ export default function StaticImageFS(props) {
                 formats: [AUTO, WEBP, AVIF]
                 quality: 90
                 height: 220
+                width: 360
               )
             }
           }

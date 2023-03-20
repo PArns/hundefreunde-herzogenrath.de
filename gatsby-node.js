@@ -7,8 +7,6 @@ exports.createPages = async ({ graphql, actions }) => {
   // Blog pages
   // ---------------------------------------------------------
 
-  return;
-
   // Create index page for the blog (required for pagination)
   const postsPerPage = 5;
   const blogTemplate = path.resolve(`src/templates/blog/blog-overview.jsx`);
@@ -17,7 +15,6 @@ exports.createPages = async ({ graphql, actions }) => {
     query blogPages {
       blog: allContentfulBlogPost(
         limit: ${postsPerPage}
-        filter: { listEntry: { eq: true } }
         ) {
         pageInfo {
           pageCount

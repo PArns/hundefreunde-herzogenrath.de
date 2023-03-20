@@ -3,7 +3,6 @@ import * as React from "react";
 const TopDivider = ({ fill }) => {
   return (
     <svg
-      class="divider header-top"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 800 75"
       preserveAspectRatio="none slice"
