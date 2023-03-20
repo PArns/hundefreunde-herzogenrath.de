@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 
 import Seo from "../../components/tools/seo";
 import MainLayout from "../../layouts/main";
-import BlogCard from "../../components/blog/blogCard";
+import BlogCard from "../../components/blog/blogcard";
 import Tag from "../../components/blog/tag";
 import Pagination from "../../components/blog/pagination";
 
