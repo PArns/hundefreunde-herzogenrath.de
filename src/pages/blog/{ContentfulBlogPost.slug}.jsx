@@ -142,7 +142,9 @@ const BlogPost = ({ data, location }) => {
       <Container>
         <FlexContainer>
           <FlexContentMain>
-            <div className="flex flex-wrap gap-1 text-neutral-400 transition hover:text-neutral-800">
+            <h1>{post.title}</h1>
+            <h2>{post.subTitle}</h2>
+            <div className="mt-5 flex flex-wrap gap-1 text-neutral-400 transition hover:text-neutral-800">
               <div className="mt-0.5 mb-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
