@@ -22,15 +22,15 @@
     "@fullcalendar/multimonth": "^6.1.5",
     "@fullcalendar/react": "^6.1.5",
     "@headlessui/react": "^1.7.13",
-    "@heroicons/react": "^2.0.16",
+    "@heroicons/react": "^2.0.17",
     "@vercel/analytics": "^0.1.11",
     "classnames": "^2.3.2",
     "dotenv": "^16.0.3",
-    "gatsby": "^5.8.0",
+    "gatsby": "^5.8.1",
     "gatsby-plugin-gatsby-cloud": "^5.8.0",
     "gatsby-plugin-image": "^3.8.0",
     "gatsby-plugin-no-sourcemaps": "^5.8.0",
-    "gatsby-plugin-sharp": "^5.8.0",
+    "gatsby-plugin-sharp": "^5.8.1",
     "gatsby-plugin-sitemap": "^6.8.0",
     "gatsby-source-contentful": "^8.8.0",
     "gatsby-source-filesystem": "^5.8.0",
@@ -44,15 +44,15 @@
     "set-scrollbar-width": "^1.0.5",
     "tailwind-container-break-out": "^2.0.6",
     "truncate-html": "^1.0.4",
-    "webpack": ">=5.76.3"
+    "webpack": ">=5.77.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
-    "cssnano": "^5.1.15",
+    "cssnano": "^6.0.0",
     "gatsby-plugin-postcss": "^6.8.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.7",
-    "prettier-plugin-tailwindcss": "^0.2.5",
-    "tailwindcss": "^3.2.7"
+    "prettier-plugin-tailwindcss": "^0.2.6",
+    "tailwindcss": "^3.3.1"
   }
 }

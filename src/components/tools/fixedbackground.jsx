@@ -3,7 +3,7 @@ import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { getSrc } from "gatsby-plugin-image";
 
-const FixedBackground = ({ children, imageName, ...other}) => {
+const FixedBackground = ({ children, imageName, ...other }) => {
   const data = useStaticQuery(graphql`
     {
       images: allFile(filter: { relativePath: { regex: "/^backgrounds//" } }) {
@@ -33,7 +33,7 @@ const FixedBackground = ({ children, imageName, ...other}) => {
 
   return (
     <div
-      className="mx-break-out w-screen bg-cover bg-fixed bg-center bg-no-repeat shadow-[inset_0_10px_10px_0px_rgba(0,0,0,0.4),inset_0_-10px_10px_0px_rgba(0,0,0,0.4)]"
+      className="w-screen bg-cover bg-fixed bg-center bg-no-repeat shadow-[inset_0_10px_10px_0px_rgba(0,0,0,0.4),inset_0_-10px_10px_0px_rgba(0,0,0,0.4)]"
       style={{ backgroundImage: `url(${imageSource})` }}
     >
       <div className="container mx-auto">

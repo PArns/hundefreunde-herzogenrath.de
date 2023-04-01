@@ -24,7 +24,7 @@ const BlogIndex = ({ data, pageContext, location }) => {
     <MainLayout location={location}>
       
       <div className="mt-10 mb-5">
-        <TatzenHeader fill="#FFCC00">Aktuelles rund um die Hundefreunde</TatzenHeader>
+        <TatzenHeader>Aktuelles rund um die Hundefreunde</TatzenHeader>
       </div>
 
       <Container>

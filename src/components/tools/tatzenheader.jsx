@@ -1,7 +1,7 @@
 import * as React from "react";
 import PawIcon from "../svgs/paw";
 
-const TatzenHeader = ({ children, fill, ...other }) => {
+const TatzenHeader = ({ children, fill = "#FFCC00", ...other }) => {
   return (
     <div className="relative h-full w-full text-center">
       <h2 className="text-4xl font-semibold lg:text-5xl">{children}</h2>

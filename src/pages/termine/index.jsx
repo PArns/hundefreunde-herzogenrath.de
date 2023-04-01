@@ -20,30 +20,34 @@ const IndexPage = ({ location }) => {
 
   return (
     <MainLayout location={location}>
-      <div className="my-10">
-        <TatzenHeader fill="#FFCC00">Termine und Veranstaltungen</TatzenHeader>
-      </div>
+      <div className="container mx-auto">
+        <div className="my-10">
+          <TatzenHeader>
+            Termine und Veranstaltungen
+          </TatzenHeader>
+        </div>
 
-      <Kurse className="mb-10" />
+        <Kurse className="mb-10" />
 
-      <div className="hidden pb-10 lg:block">
-        <FullCalendar
-          plugins={[dayGridPlugin, googleCalendarPlugin]}
-          initialView="dayGridMonth"
-          locale={deLocale}
-          googleCalendarApiKey={process.env.GATSBY_GOOGLE_API_KEY}
-          events={eventData}
-        />
-      </div>
+        <div className="hidden pb-10 lg:block">
+          <FullCalendar
+            plugins={[dayGridPlugin, googleCalendarPlugin]}
+            initialView="dayGridMonth"
+            locale={deLocale}
+            googleCalendarApiKey={process.env.GATSBY_GOOGLE_API_KEY}
+            events={eventData}
+          />
+        </div>
 
-      <div className="pb-10 lg:hidden">
-        <FullCalendar
-          plugins={[listPlugin, googleCalendarPlugin]}
-          initialView="listWeek"
-          locale={deLocale}
-          googleCalendarApiKey={process.env.GATSBY_GOOGLE_API_KEY}
-          events={eventData}
-        />
+        <div className="pb-10 lg:hidden">
+          <FullCalendar
+            plugins={[listPlugin, googleCalendarPlugin]}
+            initialView="listWeek"
+            locale={deLocale}
+            googleCalendarApiKey={process.env.GATSBY_GOOGLE_API_KEY}
+            events={eventData}
+          />
+        </div>
       </div>
     </MainLayout>
   );

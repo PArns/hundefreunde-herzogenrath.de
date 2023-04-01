@@ -13,24 +13,26 @@ import FixedBackground from "../components/tools/fixedbackground";
 import TatzenHeader from "../components/tools/tatzenheader";
 import BlogCard from "../components/blog/blogcard";
 
+import AboutUs from "../sections/about";
+
 const IndexPage = ({ location, data }) => {
   const posts = data.posts.nodes;
 
   return (
     <MainLayout location={location}>
       <div className="my-10">
-        <TatzenHeader fill="#FFCC00">Unsere Kurse</TatzenHeader>
+        <TatzenHeader>Unsere Kurse</TatzenHeader>
       </div>
 
-      <Kurse className="mb-10" />
+      <Kurse className="container mx-auto mb-10" />
 
-      <div className="mx-break-out w-screen py-5 bg-gray-100">
+      <div className="w-screen bg-gray-100 py-5">
         <div className="container mx-auto">
           <div className="my-10">
-            <TatzenHeader fill="#FFCC00">Aktuelles</TatzenHeader>
+            <TatzenHeader>Aktuelles</TatzenHeader>
           </div>
 
-          <div className="my-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="container mx-auto my-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {posts &&
               posts.map((post) => <BlogCard key={post.slug} post={post} />)}
           </div>
@@ -38,7 +40,7 @@ const IndexPage = ({ location, data }) => {
           <div className="my-10 text-right">
             <Link
               to={`/blog/#main`}
-              className="rounded bg-sky-500 py-2 px-4 text-xl font-semibold text-white transition hover:bg-sky-700"
+              className="rounded bg-sky-500 px-4 py-2 text-xl font-semibold text-white transition hover:bg-sky-700"
             >
               Weitere Neuigkeiten gibt es hier ...
             </Link>
@@ -67,12 +69,16 @@ const IndexPage = ({ location, data }) => {
         <div className="text-center lg:-mt-6">
           <Link
             to="/anfahrt/#main"
-            className="rounded-lg bg-sky-500 p-3 text-base hover:bg-sky-700 lg:text-2xl"
+            className="rounded-lg bg-sky-500 p-2 text-base hover:bg-sky-700 md:p-3 lg:text-2xl"
           >
             Besucht uns doch zu einer Probestunde!
           </Link>
         </div>
       </FixedBackground>
+
+      <div className="bg-gray-100 py-10">
+        <AboutUs className="container mx-auto" />
+      </div>
     </MainLayout>
   );
 };
