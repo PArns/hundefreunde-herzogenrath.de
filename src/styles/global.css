@@ -3,5 +3,10 @@
 @tailwind utilities;
 
 body {
-    @apply overflow-x-hidden;
+  @apply overflow-x-hidden;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
 }

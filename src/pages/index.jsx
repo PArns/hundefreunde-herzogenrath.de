@@ -14,6 +14,7 @@ import TatzenHeader from "../components/tools/tatzenheader";
 import BlogCard from "../components/blog/blogcard";
 
 import AboutUs from "../sections/about";
+import Anfahrt from "../sections/anfahrt";
 
 const IndexPage = ({ location, data }) => {
   const posts = data.posts.nodes;
@@ -79,6 +80,8 @@ const IndexPage = ({ location, data }) => {
       <div className="bg-gray-100 py-10">
         <AboutUs className="container mx-auto" />
       </div>
+
+      <Anfahrt className="container mx-auto py-10" />
     </MainLayout>
   );
 };
