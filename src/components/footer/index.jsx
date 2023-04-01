@@ -1,5 +1,5 @@
 import * as React from "react";
-import { MapPinIcon, AtSymbolIcon } from "@heroicons/react/20/solid";
+import { MapPinIcon, EnvelopeIcon } from "@heroicons/react/20/solid";
 import Obfuscate from "react-obfuscate";
 import { Link } from "gatsby";
 
@@ -22,7 +22,7 @@ const Footer = () => {
               Herzogenrath
             </div>
             <div className="flex text-sm">
-              <AtSymbolIcon className="mr-1 w-4" />{" "}
+              <EnvelopeIcon className="mr-1 w-4" />{" "}
               <Obfuscate email={"info@hundefreunde-herzogenrath.de"} />
             </div>
           </div>
