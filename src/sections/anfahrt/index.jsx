@@ -5,15 +5,17 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 const position = [50.880173, 6.087774];
 
-const Anfahrt = ({ className }) => {
+const Anfahrt = ({ className, header = true, address = true }) => {
   return (
     <div className={className}>
-      <TatzenHeader>Anfahrt</TatzenHeader>
+      {header && <TatzenHeader>Anfahrt</TatzenHeader>}
 
-      <div className="mx-auto mt-5 w-max text-center">
-        <h3>Hundefreunde Herzogenrath e.V.</h3>
-        Grenzstraße 9 - 52134 Herzogenrath
-      </div>
+      {address && (
+        <div className="mx-auto mt-5 w-max text-center">
+          <h3>Hundefreunde Herzogenrath e.V.</h3>
+          Grenzstraße 9 - 52134 Herzogenrath
+        </div>
+      )}
 
       <div className="mt-5 h-[500px] w-full">
         <MapContainer center={position} zoom={16} scrollWheelZoom={false}>

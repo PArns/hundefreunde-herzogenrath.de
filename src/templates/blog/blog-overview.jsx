@@ -22,54 +22,55 @@ const BlogIndex = ({ data, pageContext, location }) => {
 
   return (
     <MainLayout location={location}>
-      
-      <div className="mt-10 mb-5">
-        <TatzenHeader>Aktuelles rund um die Hundefreunde</TatzenHeader>
-      </div>
+      <div className="container mx-auto">
+        <div className="mb-5 mt-10">
+          <TatzenHeader>Aktuelles rund um die Hundefreunde</TatzenHeader>
+        </div>
 
-      <Container>
-        <div className="flex flex-wrap gap-2 py-2 md:gap-4 md:pt-4 lg:flex-nowrap">
-          <div className="w-max">
-            {blogPostData.map((post) => (
-              <BlogCard
-                post={post}
-                key={post.slug}
-                className="mb-10 last:mb-5"
-              />
-            ))}
-
-            {showAllPosts && pageContext.pageCount > 1 && (
-              <div className="flex rounded-lg bg-white">
-                <Pagination
-                  urlPrefix="/blog/"
-                  limit={pageContext.limit}
-                  skip={pageContext.skip}
-                  currentPage={pageContext.currentPage}
-                  pageCount={pageContext.pageCount}
-                  totalCount={pageContext.totalCount}
+        <Container>
+          <div className="flex flex-wrap gap-2 py-2 md:gap-4 md:pt-4 lg:flex-nowrap">
+            <div className="w-max">
+              {blogPostData.map((post) => (
+                <BlogCard
+                  post={post}
+                  key={post.slug}
+                  className="mb-10 last:mb-5"
                 />
-              </div>
-            )}
-          </div>
-
-          <div className="hidden h-fit lg:flex">
-            <div className="w-[350px] rounded-lg border bg-white p-2 shadow-lg">
-              <h4 className="mb-1 font-semibold">Blog Tag-Cloud</h4>
-              {tagData.map((tag) => (
-                <Tag tag={tag} key={tag} />
               ))}
 
-              {!showAllPosts && (
-                <Tag
-                  tag="Alle anzeigen"
-                  key="Alle anzeigen"
-                  uri="/blog/#main"
-                />
+              {showAllPosts && pageContext.pageCount > 1 && (
+                <div className="flex rounded-lg bg-white">
+                  <Pagination
+                    urlPrefix="/blog/"
+                    limit={pageContext.limit}
+                    skip={pageContext.skip}
+                    currentPage={pageContext.currentPage}
+                    pageCount={pageContext.pageCount}
+                    totalCount={pageContext.totalCount}
+                  />
+                </div>
               )}
             </div>
+
+            <div className="hidden h-fit lg:flex">
+              <div className="w-[350px] rounded-lg border bg-white p-2 shadow-lg">
+                <h4 className="mb-1 font-semibold">Blog Tag-Cloud</h4>
+                {tagData.map((tag) => (
+                  <Tag tag={tag} key={tag} />
+                ))}
+
+                {!showAllPosts && (
+                  <Tag
+                    tag="Alle anzeigen"
+                    key="Alle anzeigen"
+                    uri="/blog/#main"
+                  />
+                )}
+              </div>
+            </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </MainLayout>
   );
 };
