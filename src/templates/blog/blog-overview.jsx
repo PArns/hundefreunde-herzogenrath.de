@@ -12,7 +12,7 @@ import Pagination from "../../components/blog/pagination";
 
 import Container from "../../components/layout/container";
 
-const Title = "Blog";
+const Title = "Neuigkeiten rund um die Hundefreunde";
 
 const BlogIndex = ({ data, pageContext, location }) => {
   const showAllPosts = pageContext.tag === "*";

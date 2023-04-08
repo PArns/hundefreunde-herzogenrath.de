@@ -22,9 +22,7 @@ const IndexPage = ({ location }) => {
     <MainLayout location={location}>
       <div className="container mx-auto">
         <div className="my-10">
-          <TatzenHeader>
-            Termine und Veranstaltungen
-          </TatzenHeader>
+          <TatzenHeader>Termine und Veranstaltungen</TatzenHeader>
         </div>
 
         <Kurse className="mb-10" />
@@ -56,5 +54,5 @@ const IndexPage = ({ location }) => {
 export default IndexPage;
 
 export const Head = () => {
-  return <Seo />;
+  return <Seo title="Termine und Veranstaltungen" />;
 };

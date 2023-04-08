@@ -57,5 +57,5 @@ const IndexPage = ({ location }) => {
 export default IndexPage;
 
 export const Head = () => {
-  return <Seo />;
+  return <Seo title="Anfahrt" />;
 };
