@@ -23,6 +23,7 @@ const IndexPage = ({ location }) => {
           href="https://goo.gl/maps/zpao9B6dkfcNnrYt9"
           className="text-sky-800"
           target="_blank"
+          rel="noreferrer"
         >
           Grenzstraße 9
         </a>
