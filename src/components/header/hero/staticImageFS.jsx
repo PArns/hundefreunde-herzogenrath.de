@@ -49,7 +49,9 @@ export default function StaticImageFS(props) {
 
   return (
     <div className="h-max lg:h-screen">
-      <GatsbyImage image={imageData} alt={alt} className="lg:hidden" />
+      <div className="lg:hidden">
+        <GatsbyImage image={imageData} alt={alt} />
+      </div>
 
       <GatsbyImage
         image={imageData}
