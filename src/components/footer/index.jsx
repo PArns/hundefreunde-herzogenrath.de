@@ -9,7 +9,7 @@ const CurrentYear = () => {
 
 const Footer = () => {
   return (
-    <div className="flex w-full bg-gray-800 text-white">
+    <div className="flex w-full bg-gray-800 px-2 text-white">
       <div className="container mx-auto">
         <div className="flex flex-col justify-between pt-4 md:flex-row">
           <div className="flex flex-col">
