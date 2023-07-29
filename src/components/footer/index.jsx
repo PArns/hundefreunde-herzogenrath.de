@@ -26,7 +26,7 @@ const Footer = () => {
               <Obfuscate email={"info@hundefreunde-herzogenrath.de"} />
             </div>
           </div>
-          <div className="mx-auto flex flex-col">
+          <div className="mx-auto hidden flex-col md:flex">
             <div className="text-md">
               <div>
                 <Link to="/kurse/#main">Kurse</Link>
