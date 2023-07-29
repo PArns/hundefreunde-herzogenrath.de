@@ -33,7 +33,7 @@ const FixedBackground = ({ children, imageName, ...other }) => {
 
   return (
     <div
-      className="w-screen bg-cover bg-fixed bg-center bg-no-repeat shadow-[inset_0_10px_10px_0px_rgba(0,0,0,0.4),inset_0_-10px_10px_0px_rgba(0,0,0,0.4)]"
+      className="w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-[inset_0_10px_10px_0px_rgba(0,0,0,0.4),inset_0_-10px_10px_0px_rgba(0,0,0,0.4)]"
       style={{ backgroundImage: `url(${imageSource})` }}
     >
       <div className="container mx-auto">

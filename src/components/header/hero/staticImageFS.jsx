@@ -24,6 +24,17 @@ export default function StaticImageFS(props) {
     }
   `);
 
+  const bgImage = {
+    pointerEvents: "none",
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    left: 0,
+    top: 0,
+    zIndex: -1,
+    objectPosition: "center",
+  };
+
   const { filename, alt, ...other } = props;
 
   const image = data.images.edges.find((n) => {
@@ -35,5 +46,17 @@ export default function StaticImageFS(props) {
   }
 
   const imageData = getImage(image.node);
-  return <GatsbyImage image={imageData} alt={alt} {...other} />;
+
+  return (
+    <div className="h-max lg:h-screen">
+      <GatsbyImage image={imageData} alt={alt} className="lg:hidden" />
+
+      <GatsbyImage
+        image={imageData}
+        alt={alt}
+        style={bgImage}
+        imgStyle={bgImage}
+      />
+    </div>
+  );
 }

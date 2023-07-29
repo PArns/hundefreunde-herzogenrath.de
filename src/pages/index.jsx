@@ -27,7 +27,7 @@ const IndexPage = ({ location, data }) => {
 
       <Kurse className="container mx-auto mb-10" />
 
-      <div className="w-screen bg-gray-100 py-5">
+      <div className="w-full bg-gray-100 py-5">
         <div className="container mx-auto">
           <div className="my-10">
             <TatzenHeader>Aktuelles</TatzenHeader>
