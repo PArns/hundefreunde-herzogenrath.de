@@ -1,10 +1,11 @@
 import * as React from "react";
+import { Link } from "gatsby";
 
 import StaticImageFS from "./staticImageFS";
 
-const KursBox = ({ name, imageName, timeText, color, children }) => {
+const KursBox = ({ name, imageName, timeText, children }) => {
   return (
-    <div className="flex h-full w-full flex-col items-stretch rounded-lg border shadow-lg">
+    <Link to={`/kurse/#${name}`} className="flex h-full w-full flex-col items-stretch rounded-lg border shadow-lg">
       <StaticImageFS
         filename={imageName}
         alt={name}
@@ -17,7 +18,7 @@ const KursBox = ({ name, imageName, timeText, color, children }) => {
       <div className="mt-auto px-4 pb-2 font-semibold text-gray-600">
         {timeText}
       </div>
-    </div>
+    </Link>
   );
 };
 
