@@ -12,7 +12,7 @@ const Hero = ({ imageName, children }) => {
     <div className="relative grid place-content-center">
       <StaticImageFS filename={imageName} alt="Hundefreunde Herzogenrath" />
 
-      <div className="absolute bottom-[44px] w-full sm:bottom-[48px]">
+      <div className="absolute bottom-[44px] w-full sm:bottom-[46px]">
         <TopDivider fill={"#1f2937"} />
       </div>
 

@@ -19,7 +19,7 @@ const Member = ({ name, imageName, since, title, mail, children }) => {
       id={name}
       className="flex w-full flex-col items-stretch rounded-lg border shadow-lg lg:flex-row"
     >
-      <div className="mx-auto p-2 text-center lg:text-left">
+      <div className="mx-auto p-2 text-left">
         <StaticImageFS
           filename={imageName}
           alt={name}
