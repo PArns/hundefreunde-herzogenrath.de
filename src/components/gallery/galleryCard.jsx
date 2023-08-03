@@ -1,29 +1,30 @@
 import * as React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 
 const GalleryCard = ({ gallery, onClick, selected, ...other }) => {
   return (
-    <div
-      className="cursor-pointer gap-4 border-x bg-white/30 transition first:rounded-t-lg first:border-t last:rounded-b-lg last:border-b hover:bg-white/50 data-[selected=true]:bg-white [&_img]:first:rounded-tl-lg [&_img]:last:rounded-bl-lg"
-      onClick={onClick}
-      data-selected={selected ? true : false}
+    <Link
+      to={`${gallery.slug}#main`}
       title={gallery.description.description}
       {...other}
     >
-      <div className="flex max-h-20">
+      <div className="relative flex flex-col">
         <div>
           <GatsbyImage
             image={getImage(gallery.teaserImage)}
             alt={gallery.name}
-            className="h-20 w-20"
+            className="rounded-lg border-2 border-gray-400 shadow-lg"
           />
         </div>
-        <div className="pl-2 pt-2">
-          <p className="text-ellipsis text-3xl font-semibold pb-1">{gallery.name}</p>
+        <div className="absolute bottom-2 left-2 text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+          <p className="text-ellipsis pb-1 text-3xl font-semibold">
+            {gallery.name}
+          </p>
           {gallery.date}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
