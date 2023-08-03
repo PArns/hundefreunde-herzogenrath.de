@@ -16,7 +16,7 @@ const GalleryPage = ({ location, data }) => {
     <MainLayout location={location}>
       <div className="container mx-auto">
         <TatzenHeader className="py-10">{gallery.name}</TatzenHeader>
-        
+
         <h3>{gallery.description.description}</h3>
         <div className="mb-4 flex flex-wrap gap-1 text-neutral-400 transition hover:text-neutral-800">
           <div className="mb-0 mt-0.5">
@@ -48,12 +48,30 @@ const GalleryPage = ({ location, data }) => {
           ))}
         </div>
 
-        <div className="my-10 text-center md:text-right">
+        <div className="my-6 flex flex-nowrap text-neutral-800">
           <Link
-            to={`/bilder/#main`}
-            className="rounded bg-sky-500 px-4 py-2 text-xl font-semibold text-white transition hover:bg-sky-700"
+            to="/bilder#main"
+            className="rounded bg-sky-500 px-4 py-2 font-semibold text-white transition hover:bg-sky-700"
           >
-            Alle Bilder
+            <div className="flex flex-nowrap">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="h-6 w-6 pr-2"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
+                  />
+                </svg>
+              </div>
+              <div>Alle Beiträge</div>
+            </div>
           </Link>
         </div>
       </div>
