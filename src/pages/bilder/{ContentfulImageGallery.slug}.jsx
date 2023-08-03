@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, getSrc } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
 import Seo from "../../components/tools/seo";
@@ -81,8 +81,18 @@ const GalleryPage = ({ location, data }) => {
 
 export default GalleryPage;
 
-export const Head = () => {
-  return <Seo title={"Bilder rund um die Hundefreunde Herzogenrath"} />;
+export const Head = ({ data, location }) => {
+  const gallery = data.gallery;
+
+  return (
+    <Seo
+      title={gallery.name}
+      description={gallery.description.description}
+      image={getSrc(gallery.teaserImage)}
+      path={location.pathname}
+      type="article"
+    />
+  );
 };
 
 export const pageQuery = graphql`
@@ -93,6 +103,16 @@ export const pageQuery = graphql`
       id
       description {
         description
+      }
+      teaserImage {
+        gatsbyImage(
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+          cropFocus: CENTER
+          width: 400
+          quality: 90
+        )
       }
       images {
         preview: gatsbyImage(
