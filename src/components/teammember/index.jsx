@@ -7,7 +7,7 @@ import Obfuscate from "react-obfuscate";
 
 const Team = ({ children }) => {
   return (
-    <div className="container mx-auto pb-10 grid grid-cols-1 gap-6 px-2 lg:px-0 xl:grid-cols-2">
+    <div className="container mx-auto grid grid-cols-1 gap-6 px-2 pb-10 lg:px-0 xl:grid-cols-2">
       {children}
     </div>
   );
@@ -51,11 +51,7 @@ const Member = ({ name, imageName, since, title, mail, children }) => {
         {mail && (
           <div className="mt-auto">
             <h3 className="text-sm text-gray-700">
-              E-Mail:{" "}
-              <Obfuscate
-                className="text-sky-800"
-                email={`${mail}@hundefreunde-herzogenrath.de`}
-              />
+              E-Mail: <Obfuscate className="text-sky-800" email={mail} />
             </h3>
           </div>
         )}

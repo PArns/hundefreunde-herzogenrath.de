@@ -18,7 +18,7 @@ const IndexPage = ({ location, data }) => {
           Bilder unserer Veranstaltungen
         </TatzenHeader>
 
-        <div className="mb-5 flex flex-col gap-2 lg:flex-row">
+        <div className="mx-2 mb-5 flex flex-col gap-2 lg:flex-row">
           <div className="lg:w-1/3">
             {galleries.map((gallery) => (
               <GalleryCard key={gallery.id} gallery={gallery} />

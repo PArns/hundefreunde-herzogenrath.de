@@ -29,7 +29,7 @@ const IndexPage = ({ location }) => {
           name="Birgit"
           imageName={"birgit.jpg"}
           since="2010-01-01"
-          mail="birgit"
+          mail="birgit@hundefreunde-herzogenrath.de"
         >
           Hallo Welt, hier muss noch Text hin!
         </Team.Member>
@@ -38,7 +38,7 @@ const IndexPage = ({ location }) => {
           name="Elisabeth"
           imageName={"elisabeth.jpg"}
           since="2000-01-01"
-          mail="elisabeth"
+          mail="elisabeth@hundefreunde-herzogenrath.de"
         >
           Hallo Welt, hier muss noch Text hin!
         </Team.Member>
@@ -47,7 +47,7 @@ const IndexPage = ({ location }) => {
           name="Julia"
           imageName={"julia.jpg"}
           since="2000-01-01"
-          mail="julia"
+          mail="julia@hundefreunde-herzogenrath.de"
         >
           Hallo Welt, hier muss noch Text hin!
         </Team.Member>
@@ -56,7 +56,7 @@ const IndexPage = ({ location }) => {
           name="Marianne"
           imageName={"marianne.jpg"}
           since="2000-01-01"
-          mail="marianne"
+          mail="marianne@hundefreunde-herzogenrath.de"
         >
           Hallo Welt, hier muss noch Text hin!
         </Team.Member>
@@ -65,7 +65,7 @@ const IndexPage = ({ location }) => {
           name="Patrick"
           imageName={"patrick.jpg"}
           since="2000-01-01"
-          mail="patrick"
+          mail="patrick@hundefreunde-herzogenrath.de"
         >
           Hallo Welt, hier muss noch Text hin!
         </Team.Member>

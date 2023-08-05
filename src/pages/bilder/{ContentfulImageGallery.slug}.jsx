@@ -17,8 +17,8 @@ const GalleryPage = ({ location, data }) => {
       <div className="container mx-auto">
         <TatzenHeader className="py-10">{gallery.name}</TatzenHeader>
 
-        <h3>{gallery.description.description}</h3>
-        <div className="mb-4 flex flex-wrap gap-1 text-neutral-400 transition hover:text-neutral-800">
+        <h3 className="mx-2">{gallery.description.description}</h3>
+        <div className="mx-2 mb-4 flex flex-wrap gap-1 text-neutral-400 transition hover:text-neutral-800">
           <div className="mb-0 mt-0.5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ const GalleryPage = ({ location, data }) => {
           <div>{gallery.date}</div>
         </div>
 
-        <div className="mb-4 flex flex-col gap-2 text-center lg:flex-row">
+        <div className="mx-2 mb-4 flex flex-col gap-2 text-center lg:flex-row">
           {gallery.images.map((image) => (
             <LightBox image={image.image}>
               <GatsbyImage
@@ -48,7 +48,7 @@ const GalleryPage = ({ location, data }) => {
           ))}
         </div>
 
-        <div className="my-6 flex flex-nowrap text-neutral-800">
+        <div className="mx-2 my-6 flex flex-nowrap text-neutral-800">
           <Link
             to="/bilder#main"
             className="rounded bg-sky-500 px-4 py-2 font-semibold text-white transition hover:bg-sky-700"
