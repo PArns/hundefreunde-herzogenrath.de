@@ -16,7 +16,7 @@ const GalleryCard = ({ gallery, onClick, selected, ...other }) => {
           <GatsbyImage
             image={getImage(gallery.teaserImage)}
             alt={gallery.name}
-            className="rounded-lg border-2 w-full border-gray-400 drop-shadow-lg"
+            className="w-full rounded-lg border-2 border-gray-400 drop-shadow-lg"
           />
         </div>
         <div className="absolute bottom-2 left-2 text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
