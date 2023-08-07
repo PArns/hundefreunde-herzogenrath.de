@@ -33,7 +33,7 @@ const IndexPage = ({ location, data }) => {
             <TatzenHeader>Aktuelles</TatzenHeader>
           </div>
 
-          <div className="container mx-auto my-8 grid grid-cols-1 gap-4 px-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className="container mx-auto my-8 grid grid-cols-1 gap-4 px-2 md:grid-cols-2 lg:grid-cols-2">
             {posts &&
               posts.map((post) => <BlogCard key={post.slug} post={post} />)}
           </div>
@@ -94,7 +94,7 @@ export const Head = () => {
 
 export const pageQuery = graphql`
   query BlogIndexQuery {
-    posts: allContentfulBlogPost(sort: { publishedAt: DESC }, limit: 5) {
+    posts: allContentfulBlogPost(sort: { publishedAt: DESC }, limit: 2) {
       nodes {
         title
         subTitle

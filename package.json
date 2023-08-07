@@ -47,7 +47,8 @@
     "set-scrollbar-width": "^1.0.5",
     "tailwind-container-break-out": "^2.0.6",
     "truncate-html": "^1.0.4",
-    "webpack": "^5.88.2"
+    "webpack": "^5.88.2",
+    "yet-another-react-lightbox": "^3.12.0"
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.3",

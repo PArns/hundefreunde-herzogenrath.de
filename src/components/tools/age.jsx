@@ -1,8 +1,9 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 
-const Age = ({ birthday }) => {
+const Age = ({ birthday, single, plural }) => {
   const [yearsOld, setYearsOld] = useState();
+  const [pluralize, setPluralize] = useState("");
 
   useEffect(() => {
     const today = new Date();
@@ -15,9 +16,19 @@ const Age = ({ birthday }) => {
     }
 
     setYearsOld(age);
-  }, [yearsOld, setYearsOld, birthday]);
 
-  return <>{yearsOld}</>;
+    if (single && plural) {
+      if (age == 1) setPluralize(single);
+      else setPluralize(plural);
+    }
+  }, [yearsOld, setYearsOld, pluralize, setPluralize, birthday]);
+
+  return (
+    <>
+      {yearsOld}
+      {pluralize}
+    </>
+  );
 };
 
 export default Age;

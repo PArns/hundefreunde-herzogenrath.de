@@ -15,9 +15,9 @@ const Kurse = ({ className }) => {
         imageName={"welpen.jpg"}
         timeText="Der Welpenkurs findet von 14:00 Uhr bis 15:00 Uhr statt"
       >
-        Der Welpenkurs ist für die Kleinsten unter uns gedacht und bietet für
-        Hunde, bis 6 Monate, sowie Herrchen und Frauchen eine Grundeinführung
-        für den neuen Hausbewohner an.
+        Der Welpenkurs ist für die Kleinsten unter unseren Vierbeinern gedacht
+        und bietet für Hunde, bis 6 Monate, sowie Herrchen und Frauchen eine
+        Grundeinführung für den neuen Hausbewohner an.
       </KursBox>
 
       <KursBox
@@ -25,8 +25,8 @@ const Kurse = ({ className }) => {
         imageName={"anfaenger.jpg"}
         timeText="Der Anfängerkurs findet von 14:00 Uhr bis 15:00 Uhr statt"
       >
-        Im Anfängerkurs geht es um die Grundkommandos und den Grundgehorsam des
-        Vierbeiners.
+        Der Anfängerkurs ist für alle Vierbeiner ab 6 Monaten und legt den
+        Grundstein für das weitere Training.
       </KursBox>
 
       <KursBox

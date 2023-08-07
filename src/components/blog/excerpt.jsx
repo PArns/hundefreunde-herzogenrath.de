@@ -5,7 +5,7 @@ import truncate from "truncate-html";
 
 const Excerpt = ({ children, length, ...other }) => {
   const Setup = () => {
-    const wordLength = length ? length : 60;
+    const wordLength = length ? length : 40;
 
     truncate.setup({ byWords: true, length: wordLength });
   };

@@ -6,18 +6,17 @@ import { StaticImage } from "gatsby-plugin-image";
 const AboutUs = ({ className }) => {
   return (
     <div className={className}>
-      <TatzenHeader>Über uns</TatzenHeader>
+      <TatzenHeader>Wir stellen uns vor</TatzenHeader>
       <div className="mt-4 flex">
         <div>
           <h3>Die Hundefreunde Herzogenrath</h3>
           <p className="my-4">
-            wurden 1996 bereits gegründet. Wir blicken damit auf eine lange
+            gibt es seit 1996. Wir blicken damit auf eine lange
             Geschichte und viel Erfahrung zurück.
           </p>
           <p className="my-4">
             Unsere ehrenamtlichen Trainer geben Euch hier, in einfachen
-            Schritten, nachvollziehbare und effektive Trainingseinheiten im 6
-            Monatsrythmus.
+            Schritten, nachvollziehbare und effektive Trainingseinheiten.
           </p>
           <p className="my-4">
             Ganz klassisch bieten wir in verschiedenen Gruppen das Training und

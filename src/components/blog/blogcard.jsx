@@ -34,21 +34,21 @@ const BlogCard = ({ post, className, ...other }) => {
             <GatsbyImage
               image={getImage(post.image)}
               alt={post.title}
-              className="h-56 w-full rounded-lg object-contain"
+              className="h-96 w-full rounded-t-lg object-contain"
             />
           </a>
         </div>
         <a href={`/blog/${post.slug}/#main`}>
           <div className="absolute top-2 left-3">
-            <h3 className="font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:mb-2 md:text-5xl">
+            <h3 className="font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:mb-0 md:text-3xl">
               {post.title}
             </h3>
-            <h4 className="font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:text-3xl">
+            <h4 className="font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:text-2xl">
               {post.subTitle}
             </h4>
           </div>
         </a>
-        <div className="absolute bottom-2 right-3 font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:text-xl">
+        <div className="absolute bottom-2 right-3 font-semibold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:text-md">
           {post.publishedAt}
         </div>
 
