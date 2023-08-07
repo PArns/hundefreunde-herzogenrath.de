@@ -17,7 +17,9 @@ const GalleryPage = ({ location, data }) => {
       <div className="container mx-auto">
         <TatzenHeader className="py-10">{gallery.name}</TatzenHeader>
 
-        <h3 className="mx-2">{gallery.description.description}</h3>
+        {gallery.description && (
+          <h3 className="mx-2">{gallery.description.description}</h3>
+        )}
         <div className="mx-2 mb-4 flex flex-wrap gap-1 text-neutral-400 transition hover:text-neutral-800">
           <div className="mb-0 mt-0.5">
             <svg
@@ -37,7 +39,7 @@ const GalleryPage = ({ location, data }) => {
           <div>{gallery.date}</div>
         </div>
 
-        <div className="mx-2 mb-4 flex flex-col gap-2 text-center lg:flex-row">
+        <div className="mx-2 mb-4 grid grid-cols-4 gap-2 text-center lg:grid-cols-4">
           {gallery.images.map((image) => (
             <LightBox image={image.image}>
               <GatsbyImage
@@ -87,7 +89,7 @@ export const Head = ({ data, location }) => {
   return (
     <Seo
       title={gallery.name}
-      description={gallery.description.description}
+      description={gallery.description && gallery.description.description}
       image={getSrc(gallery.teaserImage)}
       path={location.pathname}
       type="article"
@@ -110,7 +112,7 @@ export const pageQuery = graphql`
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
           cropFocus: CENTER
-          width: 400
+          width: 600
           quality: 90
         )
       }

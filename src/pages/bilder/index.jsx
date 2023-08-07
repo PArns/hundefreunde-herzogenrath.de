@@ -18,12 +18,10 @@ const IndexPage = ({ location, data }) => {
           Bilder unserer Veranstaltungen
         </TatzenHeader>
 
-        <div className="mx-2 mb-5 flex flex-col gap-2 lg:flex-row">
-          <div className="lg:w-1/3">
-            {galleries.map((gallery) => (
-              <GalleryCard key={gallery.id} gallery={gallery} />
-            ))}
-          </div>
+        <div className="md:grid-flow-col mx-2 mb-5 grid grid-flow-row gap-2">
+          {galleries.map((gallery) => (
+            <GalleryCard key={gallery.id} gallery={gallery} />
+          ))}
         </div>
       </div>
     </MainLayout>
@@ -50,8 +48,8 @@ export const pageQuery = graphql`
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
             cropFocus: CENTER
-            width: 400
-            height: 300
+            width: 600
+            height: 400
             quality: 50
           )
         }

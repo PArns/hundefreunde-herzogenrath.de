@@ -47,7 +47,10 @@ const IndexPage = ({ location }) => {
             " (Labrador)",
           ]}
         >
-          Hallo Welt, hier muss noch Text hin!
+          Wie bei uns allen sind Hundefreunde und Tiere im Allgemeinen ein
+          großer Teil meines Lebens. So war es für mich selbstverständlich, dass
+          ich eines Tages auch als Trainerin arbeiten wollte. Für sie stehe ich
+          jede Woche mit Herz und Seele auf dem Platz.
         </Team.Member>
 
         <Team.Member
